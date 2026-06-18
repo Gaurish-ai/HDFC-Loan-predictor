@@ -1,120 +1,80 @@
-# HDFC-Loan-predictor
+# HDFC Loan Prediction System
 
-## Overview
-The HDFC Loan Prediction System is a Machine Learning project that predicts whether a loan application is likely to be approved based on applicant information. The project uses Logistic Regression to automate loan eligibility assessment and assist in decision-making.
+This is a simple beginner-friendly machine learning project.
 
-## Features
-- Data preprocessing and cleaning
-- Handling missing values
-- Categorical data encoding
-- Feature engineering
-- Loan approval prediction using Logistic Regression
-- Model evaluation and performance analysis
+The project predicts whether a loan will be:
 
-## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+- Approved
+- Rejected
 
-## Dataset Features
-The model uses applicant details such as:
-- Gender
-- Marital Status
-- Dependents
-- Education
-- Self Employed
-- Applicant Income
-- Coapplicant Income
-- Loan Amount
-- Loan Amount Term
-- Credit History
-- Property Area
+The algorithm used is Logistic Regression.
 
-## Project Workflow
-1. Data Collection
-2. Data Cleaning
-3. Exploratory Data Analysis (EDA)
-4. Feature Engineering
-5. Data Preprocessing
-6. Model Training using Logistic Regression
-7. Model Evaluation
-8. Loan Approval Prediction
+## Folder Structure
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/Gaurish-ai/HDFC-Loan-Prediction-System.git
+```text
+HDFC-Loan-Prediction-System/
+|
+|-- data/
+|   |-- train.csv
+|   |-- test.csv
+|
+|-- notebook/
+|   |-- loan_prediction.ipynb
+|
+|-- model/
+|   |-- loan_model.pkl
+|
+|-- images/
+|   |-- correlation_heatmap.png
+|   |-- model_workflow.png
+|
+|-- loan_prediction.py
+|-- requirements.txt
+|-- README.md
+|-- .gitignore
 ```
 
-Move to the project directory:
+## How To Run
 
-```bash
-cd HDFC-Loan-Prediction-System
-```
-
-Install dependencies:
+First install the required libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Run the notebook or Python script:
+Then run the project:
 
 ```bash
 python loan_prediction.py
 ```
 
-or
+## What The Code Does
 
-```bash
-jupyter notebook
-```
+1. Loads the train and test CSV files.
+2. Removes the `Loan_ID` column.
+3. Fills missing values.
+4. Converts text columns into numbers.
+5. Trains a Logistic Regression model.
+6. Checks model accuracy.
+7. Saves the model as `model/loan_model.pkl`.
+8. Saves two simple images in the `images` folder.
 
-## Model
-Algorithm Used:
-- Logistic Regression
+## Dataset Columns
 
-Evaluation Metrics:
-- Accuracy Score
-- Precision
-- Recall
-- F1 Score
+- Gender
+- Married
+- Dependents
+- Education
+- Employment_Status
+- Applicant_Income
+- Coapplicant_Income
+- Loan_Amount
+- Loan_Term
+- Credit_History
+- Property_Area
+- Age
+- Loan_Status
 
-## Results
-The Logistic Regression model was trained on preprocessed loan application data and used to predict loan approval status based on applicant information.
+## Note
 
-## Future Improvements
-- Random Forest Classifier
-- XGBoost
-- Hyperparameter Tuning
-- Web Application Deployment using Flask/Streamlit
-
-## Folder Structure
-
-```
-HDFC-Loan-Prediction-System/
-│
-├── dataset/
-├── notebooks/
-├── models/
-├── loan_prediction.py
-├── requirements.txt
-├── README.md
-└── assets/
-```
-
-## Author
-
-Gaurish Garg
-
-LinkedIn: [https://www.linkedin.com/in/gaurish-garg-956962348/]
-
-Email: gaurish9d18@gmail.com
+This project is for learning purposes only.
